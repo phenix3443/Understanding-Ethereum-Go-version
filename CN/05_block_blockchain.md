@@ -2,7 +2,7 @@
 
 ## Block in General
 
-### Date Structure
+### Data Structure
 
 ```go
 type Block struct {
@@ -41,7 +41,7 @@ type Header struct {
 
 ## Blockchain
 
-### Date Structure
+### Data Structure
 
 ```golang
 type BlockChain struct {
@@ -99,5 +99,7 @@ type BlockChain struct {
 }
 
 ```
+
 ## 向Blockchain中插入Block
+
 `func (bc *BlockChain) insertChain(chain types.Blocks, verifySeals, setHead bool) (int, error)`
