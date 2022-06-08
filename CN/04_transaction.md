@@ -10,7 +10,7 @@
 2. 创建新的Contract。
 3. 调用Contract中会修改目标Contract中持久化数据或者间接修改其他Account/Contract数据的函数。
 
-这里我们对Transaction的功能性的细节再进行一些额外的补充。首先，Transaction只能创建Contract账户，而不能用于创建外部账户(EOA)。第二，如果调用Contract中的只读函数，是不需要构造Transaction的。相对的，所有参与Account/Contract数据修改的操作都需要通过Transaction来进行。第三，广义上的Transaction只能由外部账户(EOA)构建。Contract是没有办法显式构造Layer-1层面的交易的。在某些合约函数的执行过程中，Contract在可以通过构造internal transaction来与其他的合约进行交互，但是这种Internal transaction与我们提到的Layer-1层面的交易有所不同，我们会在之后的章节介绍。
+这里我们对Transaction的功能性的细节再进行一些额外的补充。首先，Transaction只能创建Contract账户，而不能用于创建外部账户(EOA)。第二，如果调用Contract中的只读函数，是不会生成Transaction的。相对的，所有参与Account/Contract数据修改的操作都需要通过Transaction来进行。第三，广义上的Transaction只能由外部账户(EOA)构建。Contract是没有办法显式构造Layer-1层面的交易的。在某些合约函数的执行过程中，Contract在可以通过构造internal transaction来与其他的合约进行交互，但是这种Internal transaction与我们提到的Layer-1层面的交易有所不同，我们会在之后的章节介绍。
 
 ## LegacyTx & AccessListTX & DynamicFeeTx
 
